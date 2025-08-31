@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora de Montaña - Camilo Pérez</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Leaflet (mapa) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <h1>⛰️ Bitácora de Montaña</h1>
+    <p>Mi registro personal de ascensos y salidas</p>
+  </header>
+
+  <main>
+    <!-- Buscador -->
+    <section>
+      <input type="text" id="buscador" placeholder="🔍 Buscar cerro o fecha..." onkeyup="filtrarSalidas()">
+    </section>
+
+    <!-- Lista de salidas -->
+    <section id="salidas" class="salidas">
+      <article data-nombre="Cerro Gloria" data-fecha="2025-08-15" data-lat="-32.85" data-lng="-70.12">
+        <h2><a href="salida1.html">Cerro Gloria</a></h2>
+        <p><strong>Fecha:</strong> 15 agosto 2025</p>
+        <p><strong>Altitud:</strong> 3.280 msnm</p>
+        <p>Salida intensa con vistas hacia Portillo.</p>
+      </article>
+
+      <article data-nombre="Cerro La Campana" data-fecha="2025-09-10" data-lat="-32.95" data-lng="-71.08">
+        <h2><a href="#">Cerro La Campana</a></h2>
+        <p><strong>Fecha:</strong> 10 septiembre 2025</p>
+        <p><strong>Altitud:</strong> 1.880 msnm</p>
+        <p>Sendero histórico con vistas al Pacífico y Aconcagua.</p>
+      </article>
+    </section>
+
+<article data-nombre="Aconcagua" data-fecha="10 de noviembre" data-lat="LATITUD" data-lng="LONGITUD">
+  <h2><a href="salidaX.html">	Monte Aconcagua</a></h2>
+  <p><strong>Fecha:</strong> 10 de noviembre</p>
+  <p><strong>Altitud:</strong> 6.960 msnm</p>
+  <p>Puro fire spirit</p>
+</article>
+
+
+
+
+
+
+    <!-- Mapa -->
+    <section>
+      <h2>Mapa de mis ascensos</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Camilo Pérez - Mi diario de montaña</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
