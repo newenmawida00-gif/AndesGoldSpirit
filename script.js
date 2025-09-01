@@ -15,7 +15,7 @@ function filtrarSalidas() {
 }
 
 // --- Mapa ---
-let map = L.map('map').setView([-32° 45' 34", -70° 7' 41.9"] ; // centro en región Valparaíso
+let map = L.map('map').setView([-33.0, -70.5], 8) ; // centro en región Valparaíso
 
 // Capa base (mapa de OpenStreetMap, libre)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
