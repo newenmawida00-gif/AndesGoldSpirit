@@ -50,7 +50,7 @@ input#buscador {
 }
 
  #map {
-  height: 400px;
+  height: 400px; /* sin esto, no se ve nada */
   margin: 1rem 0;
   border-radius: 8px;
   border: 2px solid #2e4a33;
