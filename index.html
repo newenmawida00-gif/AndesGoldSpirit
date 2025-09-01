@@ -3,60 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitácora de Montaña - Camilo Pérez</title>
+  <title>Prueba mapa</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Leaflet (mapa) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-  <header>
-    <h1>⛰️ Grito de Los Andes</h1>
-    <p>Registro lo mas completo posible mis salidas</p>
-  </header>
+  <h1>Mapa de prueba</h1>
 
-  <main>
-    <!-- Buscador -->
-    <section>
-      <input type="text" id="buscador" placeholder="🔍 Buscar cerro o fecha..." onkeyup="filtrarSalidas()">
-    </section>
+  <section id="salidas" class="salidas">
+    <article data-nombre="Cerro Gloria" data-lat="-32.85" data-lng="-70.12">
+      <h2><a href="salida1.html">Cerro Gloria</a></h2>
+    </article>
+    <article data-nombre="Cerro La Campana" data-lat="-32.95" data-lng="-71.08">
+      <h2><a href="salida2.html">Cerro La Campana</a></h2>
+    </article>
+  </section>
 
-    <!-- Lista de salidas -->
-    <section id="salidas" class="salidas">
-      <article data-nombre="Cerro tres hermanos sur" data-fecha="2025-04-18" data-lat= -32° 45' " data-lng=-70° 7' ">
-        <h2><a href="salida1.html">Cerro Tres hermanos sur</a></h2>
-        <p><strong>Fecha:</strong> 18 de julio 2025</p>
-        <p><strong>Altitud:</strong> 4.274 msnm</p>
-        <p>Salida intensa de poco tiempo solo dos dias, apretando el paso, solo llevamos piolet, hicimos vivac quebrada adentro donde se ve por ultima vez el agua, para al dia siguiente salir de madrugada por acarreos hacia el portezuelo donde encontramos una peuqeña mancha de nieve que nos "hidrato" antes de subir la cumbre, harta trepindanga en un momento llegue a pensar que hubiese sido buenpo traer casco.</p>
-      </article>
-
-
-<article data-nombre="Aconcagua" data-fecha="10 de noviembre" data-lat="LATITUD" data-lng="LONGITUD">
-  <h2><a href="salidaX.html">	Monte Aconcagua</a></h2>
-  <p><strong>Fecha:</strong> 10 de noviembre</p>
-  <p><strong>Altitud:</strong> 6.960 msnm</p>
-  <p>Puro fire spirit</p>
-</article>
-
-
-
-
-
-
-    <!-- Mapa -->
-    <section>
-      <h2>Mapa de mis ascensos</h2>
-      
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Andes Dorados Espiritus</p>
-  </footer>
-
+  <h2>Mapa</h2>
   <div id="map"></div>
-<script src="script.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>
