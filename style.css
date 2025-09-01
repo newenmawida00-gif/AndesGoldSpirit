@@ -49,12 +49,14 @@ input#buscador {
   text-decoration: underline;
 }
 
-#map {
+ #map {
   height: 400px;
   margin: 1rem 0;
   border-radius: 8px;
   border: 2px solid #2e4a33;
 }
+
+
 
 footer {
   text-align: center;
