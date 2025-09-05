@@ -73,4 +73,25 @@ nav a:hover {
   margin: 1rem;
   border-radius: 8px;
   border: 2px solid #2e4a33;
+  
+let map = L.map('map').setView([-33.0, -70.5], 8);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+let salidas = document.querySelectorAll("#salidas article");
+salidas.forEach(salida => {
+  let lat = salida.dataset.lat;
+  let lng = salida.dataset.lng;
+  let nombre = salida.dataset.nombre;
+  let enlace = salida.querySelector("a").getAttribute("href");
+
+  if (lat && lng) {
+    L.marker([lat, lng]).addTo(map)
+      .bindPopup(`<a href="${enlace}"><b>${nombre}</b></a>`);
+  }
+});
+
+  
 }
