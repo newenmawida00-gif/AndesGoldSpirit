@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grito de los Andes</title>
+  <title>Bitácora de Montaña</title>
   <link rel="stylesheet" href="style.css">
 
   <!-- Leaflet -->
@@ -11,18 +11,33 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-  <h1>Grito de los Andes</h1>
+  <!-- Encabezado con foto -->
+  <header>
+    <h1>Bitácora de Montaña 🏔️</h1>
+    <p> Registros en la cordillera</p>
+  </header>
 
+  <!-- Menú -->
+  <nav>
+    <a href="#salidas">Salidas</a>
+    <a href="#map">Mapa</a>
+  </nav>
+
+  <!-- Sección de salidas -->
   <section id="salidas" class="salidas">
-    <article data-nombre="Cerro Tres hermanos Sur" data-lat="-32.85" data-lng="-70.12">
-      <h2><a href="salida1.html">Cerro Tres hermanos Sur</a></h2>
+    <article data-nombre="Cerro Tres Hermanos sur" data-lat="-32.85" data-lng="-70.12">
+      <img src="fotos/cerro_gloria.jpg" alt="Cerro Tres hermanos sur">
+      <h2><a href="salida1.html">Cerro Tres hermanos sur</a></h2>
+      <p>Una salida exigente en la región de Valparaíso.</p>
     </article>
-   
-  </section>
 
-  <h2>Mapa</h2>
+
+
+  <!-- Mapa -->
+  <h2 style="text-align:center;">🗺️ Mapa de mis rutas</h2>
   <div id="map"></div>
 
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
