@@ -1,34 +1,76 @@
+/* Estilo general */
 body {
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;   /* color de fondo */
-  color: #333;           /* color del texto */
   margin: 0;
-  padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  background: #f4f3ef;
+  color: #333;
 }
 
+/* Encabezado con foto */
 header {
-  background: #2e4a33;   /* color verde oscuro */
+  background: url('fotos/montanas.jpg') no-repeat center center/cover;
   color: white;
   text-align: center;
+  padding: 4rem 1rem;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+header p {
+  font-size: 1.2rem;
+}
+
+/* Menú */
+nav {
+  background: #2e4a33;
+  text-align: center;
+  padding: 0.5rem;
+}
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Galería de salidas */
+.salidas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
   padding: 1rem;
 }
-
-h1, h2 {
-  margin: 0.5rem 0;
-}
-
 .salidas article {
   background: white;
-  margin: 1rem;
-  padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.salidas article:hover {
+  transform: scale(1.02);
+}
+.salidas img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.salidas h2 {
+  margin: 0.5rem;
+  color: #2e4a33;
+}
+.salidas p {
+  margin: 0.5rem 1rem 1rem;
 }
 
-a {
-  color: #2e4a33;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+/* Mapa */
+#map {
+  height: 400px;
+  margin: 1rem;
+  border-radius: 8px;
+  border: 2px solid #2e4a33;
 }
