@@ -1,97 +1,106 @@
-/* Estilo general */
+/* --- Estilo general --- */
 body {
   margin: 0;
-  font-family: 'Trebuchet MS', sans-serif;
-  background: #f4f3ef;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #fafafa;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Encabezado con foto */
+/* --- Encabezado --- */
 header {
-  background: url('fotos/montanas.jpg') no-repeat center center/cover;
+  background: #2e4a33;
   color: white;
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
 }
 header h1 {
-  font-size: 2.5rem;
   margin: 0;
+  font-size: 2.2rem;
 }
 header p {
-  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-/* Menú */
+/* --- Navegación --- */
 nav {
-  background: #2e4a33;
-  text-align: center;
-  padding: 0.5rem;
+  background: #444;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  margin: 0;
 }
 nav a {
+  display: block;
+  padding: 0.8rem 1.5rem;
   color: white;
-  margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
 }
 nav a:hover {
-  text-decoration: underline;
+  background: #2e4a33;
 }
 
-/* Galería de salidas */
+/* --- Sección de salidas --- */
 .salidas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
 }
 .salidas article {
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   transition: transform 0.2s;
 }
 .salidas article:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
 }
 .salidas img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
+.salidas .contenido {
+  padding: 1rem;
+}
 .salidas h2 {
-  margin: 0.5rem;
+  margin: 0 0 0.5rem;
   color: #2e4a33;
 }
 .salidas p {
-  margin: 0.5rem 1rem 1rem;
+  margin: 0;
+  font-size: 0.95rem;
 }
 
-/* Mapa */
+/* --- Mapa --- */
+#mapa {
+  padding: 2rem;
+  text-align: center;
+}
 #map {
-  height: 400px;
-  margin: 1rem;
-  border-radius: 8px;
+  height: 450px;
+  border-radius: 10px;
   border: 2px solid #2e4a33;
-  
-let map = L.map('map').setView([-33.0, -70.5], 8);
+  margin-top: 1rem;
+}
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-
-let salidas = document.querySelectorAll("#salidas article");
-salidas.forEach(salida => {
-  let lat = salida.dataset.lat;
-  let lng = salida.dataset.lng;
-  let nombre = salida.dataset.nombre;
-  let enlace = salida.querySelector("a").getAttribute("href");
-
-  if (lat && lng) {
-    L.marker([lat, lng]).addTo(map)
-      .bindPopup(`<a href="${enlace}"><b>${nombre}</b></a>`);
-  }
-});
-
-  
+/* --- Footer --- */
+footer {
+  background: #2e4a33;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
