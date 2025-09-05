@@ -11,31 +11,51 @@
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-  <!-- Encabezado con foto -->
+  <!-- Encabezado -->
   <header>
-    <h1>Bitácora de Montaña 🏔️</h1>
-    <p> Registros en la cordillera</p>
+    <h1>🏔️ Bitácora de Montaña</h1>
+    <p>Registro de mis salidas y rutas en la cordillera</p>
   </header>
 
-  <!-- Menú -->
+  <!-- Navegación -->
   <nav>
-    <a href="#salidas">Salidas</a>
-    <a href="#map">Mapa</a>
+    <ul>
+      <li><a href="#salidas">Salidas</a></li>
+      <li><a href="#map">Mapa</a></li>
+    </ul>
   </nav>
 
   <!-- Sección de salidas -->
-  <section id="salidas" class="salidas">
-    <article data-nombre="Cerro Tres Hermanos sur" data-lat="-32.85" data-lng="-70.12">
-      <img src="fotos/cerro_gloria.jpg" alt="Cerro Tres hermanos sur">
-      <h2><a href="salida1.html">Cerro Tres hermanos sur</a></h2>
-      <p>Una salida exigente en la región de Valparaíso.</p>
-    </article>
+  <main>
+    <section id="salidas" class="salidas">
+      <article data-nombre="Cerro Gloria" data-lat="-32.85" data-lng="-70.12">
+        <img src="fotos/cerro_gloria.jpg" alt="Cerro Gloria">
+        <div class="contenido">
+          <h2><a href="salida1.html">Cerro Gloria</a></h2>
+          <p>Una salida exigente en la región de Valparaíso.</p>
+        </div>
+      </article>
 
+      <article data-nombre="Cerro La Campana" data-lat="-32.95" data-lng="-71.08">
+        <img src="fotos/campana.jpg" alt="Cerro La Campana">
+        <div class="contenido">
+          <h2><a href="salida2.html">Cerro La Campana</a></h2>
+          <p>Clásico cerro con vistas al Pacífico y los Andes.</p>
+        </div>
+      </article>
+    </section>
 
+    <!-- Mapa -->
+    <section id="mapa">
+      <h2>🗺️ Mapa de mis rutas</h2>
+      <div id="map"></div>
+    </section>
+  </main>
 
-  <!-- Mapa -->
-  <h2 style="text-align:center;">🗺️ Mapa de mis rutas</h2>
-  <div id="map"></div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bitácora de Montaña - Hecho por Camilo Pérez</p>
+  </footer>
 
   <!-- Script -->
   <script src="script.js"></script>
